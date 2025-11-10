@@ -1,6 +1,8 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
+
+const colorPage: number = 41  //220 for Nord
 /**
  * Quartz 4 Configuration
  *
@@ -8,7 +10,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Ricardx.fm",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -16,7 +18,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "ricardxjmg.github.io/ricardx-quartz/",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -39,7 +41,7 @@ const config: QuartzConfig = {
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#fff23688",
         },
-        darkMode: {
+        /* darkMode: {
           light: "#161618",
           lightgray: "#393639",
           gray: "#646464",
@@ -49,6 +51,19 @@ const config: QuartzConfig = {
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#b3aa0288",
+        }, */ 
+        
+        // This is my propose for create a palette similar as Nord, but with other color
+        darkMode: {
+          light: `hsl(${colorPage},16%,22%)`, // W0
+          lightgray: `hsl(${colorPage},17%,32%)`, //W2
+          gray: `hsl(${colorPage},16%,36%)`, //W3
+          darkgray: `hsl(${colorPage-1},28%,88%)`, //W4
+          dark: `hsl(${colorPage-2},27%,94%)`, //W6
+          tertiary: `hsl(${colorPage-7},32%,52%)`, // w10
+          secondary:`hsl(${colorPage-10},43%,67%)`, // W9
+          highlight: `hsla(${colorPage}, 17%, 32%, 0.35)`, //w2
+          textHighlight: `hsla(${colorPage-27},43%,67%,0.8)`, //w8
         },
       },
     },

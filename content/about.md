@@ -3,7 +3,8 @@ title: About me
 draft: "false"
 lang: es
 ---
+## Brief introduction
 
-¡Hola!, este solo es una prueba. Contacto [[contact]]
+Hello and Welcome 
 
-
+My name is Ricardo. I graduated from physics and mathematics in Mexico in the IPN (probably I will write some note about this institute). 
