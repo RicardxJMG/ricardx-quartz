@@ -1,8 +1,27 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
+const colorPage:number = 71   //71 220 for Nord 
+const wrapHue = (hue:number) => (hue%360+360)%360;
+const W = {
+  // Alternative to Polar Night
+  w0:  (h:number) => `hsl(${wrapHue(h)},16%,22%)`,
+  w1:  (h:number) => `hsl(${wrapHue(h+2)},16%,28%)`,
+  w2:  (h:number) => `hsl(${wrapHue(h)},17%,32%)`,
+  w3:  (h:number) => `hsl(${wrapHue(h)},16%,36%)`,
+  // Alternative to Snow Storm
+  w4:  (h:number) => `hsl(${wrapHue(h-1)},28%,88%)`,
+  w5:  (h:number) => `hsl(${wrapHue(h-2)},27%,92%)`,
+  w6:  (h:number) => `hsl(${wrapHue(h-2)},27%,94%)`,
 
-const colorPage: number = 41  //220 for Nord
+  // Alternative to Frost
+  w7:  (h:number) => `hsl(${wrapHue(h-41)},25%,65%)`,
+  w8:  (h:number) => `hsl(${wrapHue(h-27)},43%,67%)`,
+  w9:  (h:number) => `hsl(${wrapHue(h-10)},34%,63%)`,
+  w10: (h:number) => `hsl(${wrapHue(h-7)},32%,52%)`,
+};
+
+
 /**
  * Quartz 4 Configuration
  *
@@ -30,7 +49,7 @@ const config: QuartzConfig = {
         code: "IBM Plex Mono",
       },
       colors: {
-        lightMode: {
+        /* lightMode: {
           light: "#faf8f8",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
@@ -40,7 +59,8 @@ const config: QuartzConfig = {
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#fff23688",
-        },
+        }, 
+        */
         /* darkMode: {
           light: "#161618",
           lightgray: "#393639",
@@ -51,20 +71,34 @@ const config: QuartzConfig = {
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#b3aa0288",
-        }, */ 
-        
+        }, 
+        */
+
         // This is my propose for create a palette similar as Nord, but with other color
-        darkMode: {
-          light: `hsl(${colorPage},16%,22%)`, // W0
-          lightgray: `hsl(${colorPage},17%,32%)`, //W2
-          gray: `hsl(${colorPage},16%,36%)`, //W3
-          darkgray: `hsl(${colorPage-1},28%,88%)`, //W4
-          dark: `hsl(${colorPage-2},27%,94%)`, //W6
-          tertiary: `hsl(${colorPage-7},32%,52%)`, // w10
-          secondary:`hsl(${colorPage-10},43%,67%)`, // W9
-          highlight: `hsla(${colorPage}, 17%, 32%, 0.35)`, //w2
-          textHighlight: `hsla(${colorPage-27},43%,67%,0.8)`, //w8
+        
+        lightMode: {
+          light:        W.w4(colorPage),
+          lightgray:    W.w8(colorPage),
+          gray:         W.w3(colorPage),
+          darkgray:     W.w2(colorPage),
+          dark:         W.w1(colorPage),
+          secondary:    W.w10(colorPage),
+          tertiary:     W.w9(colorPage),
+          highlight:    `hsla(${wrapHue(colorPage-27)},43%,67%,0.22)`,
+          textHighlight:`hsla(${wrapHue(colorPage-41)},32%,52%,0.65)`,
         },
+
+        darkMode: {
+          light:        W.w0(colorPage),
+          lightgray:    W.w2(colorPage),
+          gray:         W.w3(colorPage),
+          darkgray:     W.w4(colorPage),
+          dark:         W.w6(colorPage),
+          secondary:    W.w9(colorPage),
+          tertiary:     W.w10(colorPage),
+          highlight:    `hsla(${wrapHue(colorPage-27)}, 43%, 67%, 0.22)`,      
+          textHighlight:`hsla(${wrapHue(colorPage-41)}, 32%,52%,0.65)`,       
+        }
       },
     },
   },
@@ -81,7 +115,7 @@ const config: QuartzConfig = {
         },
         keepBackground: false,
       }),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: true }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),

@@ -1,7 +1,7 @@
 ---
 title: First Changes
 draft: "false"
-lang: es
+lang: en
 ---
 ## The palette
 
@@ -62,5 +62,58 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle: "Ricardx.fm", // future domain
     
-  
 ```
+
+## Example color
+
+
+<div style="display:flex; justify-content:center; margin: 2rem 0;">
+  <div style="
+      width: 512px;
+      height: 128px;
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 3px solid hsl(64,32%,52%);
+  ">
+    
+    <div style="
+      flex: 1;
+      background: hsl(71,16%,22%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    ">hsl(71,16%,22%)</div>
+
+    <div style="
+      flex: 1;
+      background: hsl(73,16%,28%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    ">hsl(73,16%,28%)</div>
+
+    <div style="
+      flex: 1;
+      background: hsl(71,17%,32%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    ">hsl(71,17%,32%)</div>
+
+    <div style="
+      flex: 1;
+      background: hsl(71,16%,36%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    ">hsl(71,16%,36%)</div>
+  </div>
+</div>
+
+
+
