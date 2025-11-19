@@ -99,6 +99,10 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
             if (cssclasses) data.cssclasses = cssclasses
 
             const socialImage = coalesceAliases(data, ["socialImage", "image", "cover"])
+            
+            
+            /*
+            By default
 
             const created = coalesceAliases(data, ["created", "date"])
             if (created) {
@@ -110,7 +114,23 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
               "lastmod",
               "updated",
               "last-modified",
+            ]) 
+              
+            */
+
+            // code from https://quartz.eilleeenz.com/Quartz-customization-log ## Putting date created & modified on content pages, but not index
+
+            const created = coalesceAliases(data, ["created", "date", "date created"])
+            if (created) data.created = created
+            const modified = coalesceAliases(data,[
+              "modified",
+              "lastmod", 
+              "update", 
+              "last-modified", 
+              "date modified"
             ])
+
+
             if (modified) data.modified = modified
             data.modified ||= created // if modified is not set, use created
 

@@ -77,15 +77,15 @@ const config: QuartzConfig = {
         // This is my propose for create a palette similar as Nord, but with other color
         
         lightMode: {
-          light:        W.w4(colorPage),
-          lightgray:    W.w8(colorPage),
+          light:        W.w6(colorPage),
+          lightgray:    W.w4(colorPage),
           gray:         W.w3(colorPage),
           darkgray:     W.w2(colorPage),
-          dark:         W.w1(colorPage),
+          dark:         W.w0(colorPage),
           secondary:    W.w10(colorPage),
-          tertiary:     W.w9(colorPage),
-          highlight:    `hsla(${wrapHue(colorPage-27)},43%,67%,0.22)`,
-          textHighlight:`hsla(${wrapHue(colorPage-41)},32%,52%,0.65)`,
+          tertiary:     W.w8(colorPage),
+          highlight:    `hsla(${wrapHue(colorPage-41)}, 25%, 65%,0.17)`,   // w7   
+          textHighlight:`hsla(${wrapHue(colorPage-10)}, 34%, 63%,0.85)`,     // w9  
         },
 
         darkMode: {
@@ -94,10 +94,10 @@ const config: QuartzConfig = {
           gray:         W.w3(colorPage),
           darkgray:     W.w4(colorPage),
           dark:         W.w6(colorPage),
-          secondary:    W.w9(colorPage),
-          tertiary:     W.w10(colorPage),
-          highlight:    `hsla(${wrapHue(colorPage-27)}, 43%, 67%, 0.22)`,      
-          textHighlight:`hsla(${wrapHue(colorPage-41)}, 32%,52%,0.65)`,       
+          secondary:    W.w10(colorPage),
+          tertiary:     W.w8(colorPage),
+          highlight:    `hsla(${wrapHue(colorPage-41)}, 25%, 65%, 0.15)`,   // w7   
+          textHighlight:`hsla(${wrapHue(colorPage-10)}, 34%,63%,0.85)`,     // w9  
         }
       },
     },
@@ -138,7 +138,7 @@ const config: QuartzConfig = {
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+     // Plugin.CustomOgImages(),
     ],
   },
 }

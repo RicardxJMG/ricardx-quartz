@@ -64,55 +64,40 @@ const config: QuartzConfig = {
     
 ```
 
-## Example color
+## My palette
 
+Using the a hue of 71 I get 
+
+### Polar Night Alternative
 
 <div style="display:flex; justify-content:center; margin: 2rem 0;">
-  <div style="
-      width: 512px;
-      height: 128px;
-      display: flex;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 3px solid hsl(64,32%,52%);
-  ">
-    
-    <div style="
-      flex: 1;
-      background: hsl(71,16%,22%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 14px;
-    ">hsl(71,16%,22%)</div>
+  <div style="  width: 512px;  height: 128px;    display: flex;    border-radius: 10px;overflow: hidden;">
+    <div style="display:flex; flex:1; background: hsl(71,16%,22%); justify-content:center;align-items:center"><p style ="color:hsl(69,27%, 94%);">hsl(71,16%,22%)</p></div>
+    <div style="display:flex; flex: 1; background: hsl(73,16%,28%);justify-content:center;align-items:center"><p style ="color:hsl(69,27%, 94%);">hsl(73,16%,28%)</p> </div>
+    <div style="display:flex; flex: 1; background: hsl(71,17%, 32%);justify-content:center;align-items:center"><p style ="color:hsl(69,27%, 94%);">hsl(71,17%, 32%)</p></div>
+    <div style="display:flex; flex: 1; background: hsl(71,16%,36%);justify-content:center;align-items:center"><p style ="color:hsl(69,27%, 94%);">hsl(71,16%,36%)</p></div>
+</div>
+</div>
 
-    <div style="
-      flex: 1;
-      background: hsl(73,16%,28%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 14px;
-    ">hsl(73,16%,28%)</div>
+### Snow Storm Alternative
 
-    <div style="
-      flex: 1;
-      background: hsl(71,17%,32%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 14px;
-    ">hsl(71,17%,32%)</div>
+<div style="display:flex; justify-content:center; margin: 2rem 0;">
+  <div style="  width: 512px;  height: 128px;    display: flex;    border-radius: 10px;overflow: hidden;">
+    <div style="display:flex; flex:1; background: hsl(70,28%,88%); justify-content:center;align-items:center"><p style ="color:hsl(73,16%,28%);">hsl(70,28%,88%)</p></div>
+    <div style="display:flex; flex: 1; background: hsl(69,27%,92%); justify-content:center;align-items:center"> <p style ="color:hsl(73,16%,28%);">hsl(69,27%,92%)</p></div>
+    <div style="display:flex; flex: 1; background: hsl(69,27%, 94%);justify-content:center;align-items:center"><p style ="color:hsl(73,16%,28%);">hsl(69,27%, 94%)</p> </div>
+</div>
+</div>
 
-    <div style="
-      flex: 1;
-      background: hsl(71,16%,36%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 14px;
-    ">hsl(71,16%,36%)</div>
-  </div>
+### Frost Alternative
+
+<div style="display:flex; justify-content:center; margin: 2rem 0;">
+  <div style="  width: 512px;  height: 128px;    display: flex;    border-radius: 10px;overflow: hidden;">
+    <div style="display:flex; flex:1; background: hsl(30,25%,65%); justify-content:center;align-items:center"><p style ="color:hsl(69,27%, 94%);">hsl(30,25%,65%)</p></div>
+    <div style="display:flex; flex: 1; background: hsl(44,43%,67%);justify-content:center;align-items:center"><p style ="color:hsl(69,27%, 94%);">hsl(44,43%,67%)</p> </div>
+    <div style="display:flex; flex: 1; background: hsl(61,34%, 63%);justify-content:center;align-items:center"><p style ="color:hsl(69,27%, 94%);">hsl(61,34%, 63%)</p></div>
+    <div style="display:flex; flex: 1; background: hsl(64,32%,52%);justify-content:center;align-items:center"><p style ="color:hsl(69,27%, 94%);">hsl(64,32%,52%)</p></div>
+</div>
 </div>
 
 
